@@ -4,7 +4,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   void answerQuestion() {
-    print('Answer chosen!');
+    print('Answer chosen 1!');
   }
 
   @override
@@ -28,8 +28,12 @@ class MyApp extends StatelessWidget {
               child: Text('Answer 1'),
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: () => print('Answer chosen 2'),
               child: Text('Answer 2'),
+            ),
+            ElevatedButton(
+              onPressed: () => print('Answer chosen 3'),
+              child: Text('Answer 3'),
             ),
           ],
         ),
