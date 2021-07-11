@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/answer.dart';
 import 'package:newapp/question.dart';
 
 void main() => runApp(MyApp());
@@ -30,6 +31,7 @@ class MyAppState extends State<MyApp> {
     ];
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('My First App'),
@@ -39,18 +41,9 @@ class MyAppState extends State<MyApp> {
             Question(
               questions[_questionIndex],
             ),
-            ElevatedButton(
-              onPressed: () => _answerQuestion(),
-              child: Text('Answer 1'),
-            ),
-            ElevatedButton(
-              onPressed: () => print('Answer chosen 2'),
-              child: Text('Answer 2'),
-            ),
-            ElevatedButton(
-              onPressed: () => print('Answer chosen 3'),
-              child: Text('Answer 3'),
-            ),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),
